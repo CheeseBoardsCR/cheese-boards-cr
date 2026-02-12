@@ -1,11 +1,116 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Cheese Boards CR</title><link rel="stylesheet" href="styles.css"></head><body><main id="contenido">
-    <section id="galeria" aria-labelledby="galeria-title">
-      <h2 id="galeria-title">Galería gourmet</h2>
-      <p>Fotos reales de nuestras tablas: frescura, calidad y elegancia.</p>
-      <div class="gallery">
-        
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cheese Boards CR</title>
+  <meta name="description" content="Tablas de queso y charcutería personalizadas en Costa Rica. Enviós a todo el país. Diseños elegantes y delicados." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="topbar" role="banner">
+    <div class="brand">
+      <img src="assets/logo.png" alt="Cheese Boards CR - logo" class="logo" />
+      <span class="site-title">Cheese Boards CR</span>
+    </div>
+
+    <div class="controls">
+      <label for="lang" class="visually-hidden">Idioma</label>
+      <select id="lang" aria-label="Seleccionar idioma">
+        <option value="es" selected>Español</option>
+        <option value="en">English</option>
+        <option value="pt">Português</option>
+      </select>
+
+      <button id="menuBtn" class="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">☰</button>
+    </div>
+
+    <nav id="nav" class="nav" role="navigation" aria-label="Navegación principal">
+      <ul>
+        <li><a data-i18n="nav_home" href="#contenido">Inicio</a></li>
+        <li><a data-i18n="nav_services" href="#servicios">Servicios</a></li>
+        <li><a data-i18n="nav_about" href="#nosotros">Nosotros</a></li>
+        <li><a data-i18n="nav_contact" href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <img src="assets/hero.jpg" alt="Tabla de quesos gourmet con frutas y charcutería" class="hero-img" />
+        <div class="hero-copy">
+          <h1 id="hero-title" data-i18n="hero_title">Tablas gourmet elegantes y deliciosas</h1>
+          <p data-i18n="hero_sub">Creamos Cheese Boards y charcutería personalizadas para cada ocasión. Envíos a todo Costa Rica.</p>
+          <a class="btn primary" href="#servicios" data-i18n="cta_services">Ver servicios</a>
+        </div>
       </div>
-      <p><a class="btn" href="https://wa.me/50684835649?text=Hola%20Cheese%20Boards%20CR,%20quiero%20cotizar%20una%20tabla" target="_blank" rel="noopener">Quiero cotizar una tabla</a></p>
     </section>
 
-</main></body></html>
+    <section id="nosotros" aria-labelledby="nosotros-title">
+      <h2 id="nosotros-title" data-i18n="about_title">Nosotros</h2>
+      <p data-i18n="about_text">
+        Somos una empresa dedicada a la creación de Tablas de queso y Charcutería personalizadas según la necesidad de cada cliente. Trabajamos con productos premium; nos aseguramos de que cada Cheese Board refleje frescura y calidad.
+      </p>
+    </section>
+
+    <section id="servicios" aria-labelledby="servicios-title">
+      <h2 id="servicios-title" data-i18n="services_title">Servicios</h2>
+      <ul class="cards">
+        <li class="card">
+          <h3 data-i18n="svc_variety_title">Cheese Boards para cada evento</h3>
+          <p data-i18n="svc_variety_text">Mini boards para eventos corporativos, reuniones pequeñas, cumpleaños y detalles personalizados.</p>
+        </li>
+        <li class="card">
+          <h3 data-i18n="svc_pairing_title">Maridaje</h3>
+          <p data-i18n="svc_pairing_text">Te sugerimos el maridaje ideal para tu tabla: charcutería + vino.</p>
+        </li>
+        <li class="card">
+          <h3 data-i18n="svc_shipping_title">Envíos</h3>
+          <p data-i18n="svc_shipping_text">Envíos a todo Costa Rica. Envío rápido en el GAM.</p>
+        </li>
+        <li class="card">
+          <h3 data-i18n="svc_custom_title">Personalización</h3>
+          <p data-i18n="svc_custom_text">Cheese Boards personalizadas según tu gusto y ocasión.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contacto" aria-labelledby="contacto-title">
+      <h2 id="contacto-title" data-i18n="contact_title">Contacto</h2>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <p><strong data-i18n="contact_email_label">Correo:</strong> <a href="mailto:ch.zuniga@hotmail.com">ch.zuniga@hotmail.com</a></p>
+          <p><strong data-i18n="contact_phone_label">Teléfono:</strong> <a href="tel:+50684835649">+506 8483-5649</a></p>
+          <p><strong>Instagram:</strong> <a href="https://instagram.com/cheeseboardscr" target="_blank" rel="noopener">@cheeseboardscr</a></p>
+          <p><a class="btn" href="https://wa.me/50684835649" target="_blank" rel="noopener" data-i18n="cta_whatsapp">Escríbenos por WhatsApp</a></p>
+        </div>
+        <form class="form" aria-describedby="contacto-ayuda">
+          <p id="contacto-ayuda" data-i18n="contact_help">Todos los campos marcados con * son obligatorios.</p>
+
+          <label for="nombre" data-i18n="field_name">Nombre *</label>
+          <input id="nombre" name="nombre" type="text" required autocomplete="name" />
+
+          <label for="email" data-i18n="field_email">Correo electrónico *</label>
+          <input id="email" name="email" type="email" required autocomplete="email" />
+
+          <label for="mensaje" data-i18n="field_message">Mensaje *</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+          <button class="btn" type="submit" data-i18n="cta_send">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>© <span id="year"></span> Cheese Boards CR • <span data-i18n="all_rights">Todos los derechos reservados</span>.</p>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
