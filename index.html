@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mi Página Accesible</title>
+  <meta name="description" content="Sitio web accesible y fácil de usar para todas las personas." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Enlace para saltar directamente al contenido (accesible con teclado) -->
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header role="banner" class="topbar">
+    <div class="brand">
+      <img src="assets/logo.svg" alt="Logo del sitio" width="28" height="28" />
+      <span class="site-title">Mi Página Accesible</span>
+    </div>
+
+    <!-- Botón accesible para menú móvil -->
+    <button id="menuBtn" class="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">
+      ☰
+    </button>
+
+    <nav id="nav" class="nav" role="navigation" aria-label="Navegación principal">
+      <ul>
+        <li><a href="#contenido">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#accesibilidad">Accesibilidad</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <h1 id="hero-title">Bienvenidos a un sitio pensado para todos</h1>
+      <p>Contenido claro, contraste alto, navegación simple y compatibilidad con lectores de pantalla.</p>
+      <a class="btn primary" href="#servicios">Conoce nuestros servicios</a>
+    </section>
+
+    <section id="servicios" aria-labelledby="servicios-title">
+      <h2 id="servicios-title">Servicios</h2>
+      <ul class="cards">
+        <li class="card">
+          <h3>Atención al Cliente</h3>
+          <p>Respuestas rápidas, empáticas y claras para ayudarte en todo momento.</p>
+        </li>
+        <li class="card">
+          <h3>Soporte Inclusivo</h3>
+          <p>Material accesible, guías paso a paso y formatos alternativos.</p>
+        </li>
+        <li class="card">
+          <h3>Capacitaciones</h3>
+          <p>Talleres sobre accesibilidad digital y comunicación efectiva.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="accesibilidad" aria-labelledby="a11y-title">
+      <h2 id="a11y-title">Compromiso de Accesibilidad</h2>
+      <p>Nos esforzamos por cumplir con las pautas WCAG 2.1 nivel AA. Si encuentras barreras, cuéntanos.</p>
+      <ul>
+        <li>Contraste de color adecuado</li>
+        <li>Navegable con teclado (Tab, Shift+Tab, Enter/Espacio)</li>
+        <li>Etiquetas y descripciones para formularios e imágenes</li>
+        <li>Estructura semántica (header, nav, main, footer, h1–h2–h3)</li>
+      </ul>
+    </section>
+
+    <section id="contacto" aria-labelledby="contacto-title">
+      <h2 id="contacto-title">Contacto</h2>
+      <form class="form" aria-describedby="contacto-ayuda">
+        <p id="contacto-ayuda">Todos los campos marcados con * son obligatorios.</p>
+
+        <label for="nombre">Nombre *</label>
+        <input id="nombre" name="nombre" type="text" required autocomplete="name" />
+
+        <label for="email">Correo electrónico *</label>
+        <input id="email" name="email" type="email" required autocomplete="email" />
+
+        <label for="mensaje">Mensaje *</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+        <button class="btn" type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>© <span id="year"></span> Mi Página Accesible. Todos los derechos reservados.</p>
+    <nav aria-label="Enlaces del pie">
+      <ul class="footer-links">
+        <li><a href="#accesibilidad">Declaración de Accesibilidad</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#">Política de Privacidad</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
